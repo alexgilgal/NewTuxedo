@@ -6,7 +6,9 @@ RUN wget https://sourceforge.net/projects/samtools/files/samtools/1.4.1/samtools
 
 RUN tar jxvf samtools-1.4.1.tar.bz2
 RUN cd samtools-1.4.1
-RUN make -B
+RUN ./configure
+RUN make 
+RUN make install
 RUN cd 
 
 RUN cp samtools-1.4.1/samtools $HOME/bin
