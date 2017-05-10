@@ -25,11 +25,14 @@ RUN ./configure \
     
 
 
-WORKDIR $HOME
+WORKDIR /home
 
 RUN wget ftp://ftp.ccb.jhu.edu/pub/infphilo/hisat2/downloads/hisat2-2.0.5-Linux_x86_64.zip
 RUN unzip hisat2-2.0.5-Linux_x86_64.zip
+
 RUN cp hisat2-2.0.5/hisat2* hisat2-2.0.5/*.py $HOME/bin
+
+
 
 RUN wget http://ccb.jhu.edu/software/stringtie/dl/stringtie-1.3.3b.Linux_x86_64.tar.gz
 
