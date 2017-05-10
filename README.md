@@ -9,4 +9,4 @@ This repository contains the necessary Dockerfile for creating a docker image wi
 
 -StringTie 1.3.3
 
-This allows you to analyze RNA-seq data.
+This allows you to analyze RNA-seq data. For more information refer to: https://www.nature.com/nprot/journal/v11/n9/pdf/nprot.2016.095.pdf
