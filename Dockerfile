@@ -17,7 +17,7 @@ RUN mkdir samtools \
     && curl -fsSL https://github.com/samtools/samtools/releases/download/$SAMTOOLS_VERSION/samtools-$SAMTOOLS_VERSION.tar.bz2 \
         | tar -jxC samtools --strip-components=1
 
-RUN cd/samtools
+WORKDIR /root/samtools
 RUN ./configure \
     && make all all-htslib \
     && make install install-htslib
