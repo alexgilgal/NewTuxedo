@@ -12,12 +12,12 @@ RUN apt-get update \
 
 ENV SAMTOOLS_VERSION 1.4.1
 
-WORKDIR /root
+
 RUN mkdir samtools \
     && curl -fsSL https://github.com/samtools/samtools/releases/download/$SAMTOOLS_VERSION/samtools-$SAMTOOLS_VERSION.tar.bz2 \
         | tar -jxC samtools --strip-components=1
 
-WORKDIR /root/samtools
+RUN cd/samtools
 RUN ./configure \
     && make all all-htslib \
     && make install install-htslib
@@ -25,7 +25,7 @@ RUN ./configure \
     
 
 
-WORKDIR /home
+RUN cd 
 
 RUN wget ftp://ftp.ccb.jhu.edu/pub/infphilo/hisat2/downloads/hisat2-2.0.5-Linux_x86_64.zip
 RUN unzip hisat2-2.0.5-Linux_x86_64.zip
