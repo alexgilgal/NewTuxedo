@@ -22,6 +22,7 @@ RUN ./configure \
     && make all all-htslib \
     && make install install-htslib
     
+WORKDIR /
 
 RUN cd 
 
