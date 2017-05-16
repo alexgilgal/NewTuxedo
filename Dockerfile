@@ -52,6 +52,8 @@ RUN Rscript -e 'source("http://bioconductor.org/biocLite.R"); biocLite("genefilt
 
 RUN Rscript -e 'install.packages("dplyr")'
 
+RUN Rscript -e 'source("http://bioconductor.org/biocLite.R"); biocLite("DESeq2" );'
+
 
 
 
