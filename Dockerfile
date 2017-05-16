@@ -8,12 +8,7 @@ RUN apt-get update \
         bzip2 \
         curl \
         zlib1g-dev \
-        libncurses5-dev \
-        zbar-tools \
-        graphicsmagick-imagemagick-compat \
-        poppler-utils
-
-USER 10010:9001
+        libncurses5-dev 
 
 ENV SAMTOOLS_VERSION 1.4.1
 
