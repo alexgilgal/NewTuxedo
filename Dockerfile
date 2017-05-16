@@ -9,6 +9,14 @@ RUN apt-get update \
         curl \
         zlib1g-dev \
         libncurses5-dev
+        zbar-tools \
+        graphicsmagick-imagemagick-compat \
+        poppler-utils
+
+USER 10010:9001
+
+ADD main /
+CMD ["/main"]
 
 ENV SAMTOOLS_VERSION 1.4.1
 
@@ -38,6 +46,18 @@ RUN wget http://ccb.jhu.edu/software/stringtie/dl/stringtie-1.3.3b.Linux_x86_64.
 RUN  tar xvzf stringtie-1.3.3b.Linux_x86_64.tar.gz
 
 RUN  cp stringtie-1.3.3b.Linux_x86_64/stringtie /bin
+
+RUN Rscript -e 'source("http://bioconductor.org/biocLite.R"); biocLite("ballgown" );'
+
+RUN Rscript -e 'install.packages("devtools")'
+
+RUN Rscript -e 'devtools::install_github("alyssafrazee/RSkittleBrewer")'
+
+RUN Rscript -e 'source("http://bioconductor.org/biocLite.R"); biocLite("genefilter" );'
+
+RUN Rscript -e 'install.packages("dplyr")'
+
+
 
 
 
