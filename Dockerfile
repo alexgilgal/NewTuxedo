@@ -5,6 +5,9 @@ FROM r-base:3.3.2
 RUN apt-get update \
     && apt-get install -y \
         build-essential \
+        libcurl4-openssl-dev \
+        libssl-dev \
+        libxml2-dev \
         bzip2 \
         curl \
         zlib1g-dev \
