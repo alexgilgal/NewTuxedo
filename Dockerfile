@@ -15,9 +15,6 @@ RUN apt-get update \
 
 USER 10010:9001
 
-ADD main /
-CMD ["/main"]
-
 ENV SAMTOOLS_VERSION 1.4.1
 
 WORKDIR /root
