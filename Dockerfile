@@ -54,6 +54,8 @@ RUN Rscript -e 'install.packages("dplyr")'
 
 RUN Rscript -e 'source("http://bioconductor.org/biocLite.R"); biocLite("DESeq2" );'
 
+RUN Rscript -e 'source("http://bioconductor.org/biocLite.R"); biocLite("tweeDEseq" );'
+
 
 
 
