@@ -1,4 +1,4 @@
-FROM r-base:3.3.2
+FROM r-base:3.4.0
 
 # Installation of SamTools
 
@@ -55,6 +55,8 @@ RUN Rscript -e 'install.packages("dplyr")'
 RUN Rscript -e 'source("http://bioconductor.org/biocLite.R"); biocLite("DESeq2" );'
 
 RUN Rscript -e 'source("http://bioconductor.org/biocLite.R"); biocLite("tweeDEseq" );'
+
+RUN Rscript -e 'source("http://bioconductor.org/biocLite.R"); biocLite("EventPointer");'
 
 
 
